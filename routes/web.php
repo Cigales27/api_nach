@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UsuarioController;
+//Ingresa el request
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------

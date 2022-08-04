@@ -46,10 +46,10 @@
         </nav>
 
         <section>
-            <!-- cards -->
+
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-4 card-user">
                         <div class="card">
                             <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" class="card-img-top" alt="...">
                             <div class="card-body">
@@ -73,57 +73,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card">
-                            <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            </div>
-                            <div class="card-footer">
-                                <div class="row">
-                                    <div class="col-4">
-                                        <small class="text-muted"><i class="fa-solid fa-heart"></i></small>
-                                        <small class="text-muted">57</small>
-                                    </div>
-                                    <div class="col-4">
-                                        <small class="text-muted"><i class="fa-solid fa-comment"></i></i></small>
-                                        <small class="text-muted">57</small>
-                                    </div>
-                                    <div class="col-4">
-                                        <small class="text-muted"><i class="fa-solid fa-eye"></i></i></small>
-                                        <small class="text-muted">57</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card">
-                            <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            </div>
-                            <div class="card-footer">
-                                <div class="row">
-                                    <div class="col-4">
-                                        <small class="text-muted"><i class="fa-solid fa-heart"></i></small>
-                                        <small class="text-muted">57</small>
-                                    </div>
-                                    <div class="col-4">
-                                        <small class="text-muted"><i class="fa-solid fa-comment"></i></i></small>
-                                        <small class="text-muted">57</small>
-                                    </div>
-                                    <div class="col-4">
-                                        <small class="text-muted"><i class="fa-solid fa-eye"></i></i></small>
-                                        <small class="text-muted">57</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </div>                     
                 </div>
             </div>
         </section>
@@ -165,5 +115,7 @@
             </div>
         </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="/resources/js/functions.js"></script>
     </body>
 </html>

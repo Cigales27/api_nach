@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('personal_access_tokens', function (Blueprint $table) {
+        Schema::create('information', function (Blueprint $table) {
             /* $table->id();
             $table->morphs('tokenable');
             $table->string('name');
@@ -28,6 +28,7 @@ return new class extends Migration
             $table->string('image')->nullable();
             $table->string('interesting');
             $table->integer('user_id')->unsigned();
+            
         });
     }
 
