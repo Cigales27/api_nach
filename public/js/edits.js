@@ -17,17 +17,17 @@ $(document).ready(function(){
         }
     });
 
+    //Esconde el segundo hijo de la etiqueta body
+    $('body > div:nth-child(2)').hide();
+    //Esconde el tercer hijo de la etiqueta body
+    $('body > div:nth-child(3)').hide();
+    //Esconde el cuarto hijo de la etiqueta body
+    $('body > div:nth-child(4)').hide();
+
     $('#crearUsuario').click(function(){
-        var name = $('#name').val();
-        var ocupation = $('#ocupation').val();
-        var area = $('#area').val();
-        var user_id = $('#user_id').val();
-        var data = {
-            name: name,
-            ocupation: ocupation,
-            area: area,
-            user_id: user_id
-        };
+        //Create un json con el formulario #createUser
+        var data = $('#createUser').serializeArray();
+        console.log(data);
         $.ajax({
             type: 'POST',
             url: '/api/createUsuario',

@@ -17,16 +17,16 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Grupo Nach</a>
+                    <a class="nav-link" href="#">Crear usuario</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Servicios</a>
+                    <a class="nav-link" href="#">Ediatr Usuario</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Bolsa de trabajo</a>
+                    <a class="nav-link" href="#">Crear informacion</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contacto</a>
+                    <a class="nav-link" href="#">Editar informacion</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
@@ -40,7 +40,7 @@
     <h1>Crear usuario</h1>
     <!--Crea un formulario para editar un usuario-->
     <div class="container">
-        <form id="createUser"  method="POST">
+        <form id="createUser" method="POST">
             <div class="form-group">
                 <label for="name">Nombre</label>
                 <input type="text" class="form-control" name="name" id="name">
@@ -53,7 +53,7 @@
                 <label for="ocupation">Ocupacion</label>
                 <input type="text" class="form-control" name="ocupation" id="ocupation">
             </div>
-            <button type="submit" class="btn btn-primary" id="crearUsuario">Crear</button>
+            <a class="btn btn-primary" id="crearUsuario">Crear</a>
         </form>
     </div>
 
