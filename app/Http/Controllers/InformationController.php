@@ -43,7 +43,8 @@ class InformationController extends Controller
             if(!$information) throw new \Exception('Error al crear la información');   
             $archivo=$request->file('image');
             //crearemos la ruta donde se guardara el archivo
-            $ruta=storage_path('app/public/images/'.$request->user_id);
+
+            $ruta=storage_path(`/images/`.$request->user_id);
             if(!file_exists($ruta))
             {
                 mkdir($ruta, 0777, true);
@@ -88,20 +89,19 @@ class InformationController extends Controller
      * @param  \App\Models\Information  $information
      * @return \Illuminate\Http\Response
      */
-    public function edit(Information $information)
+    public function edit(Request $information)
     {
-        $information = Information::find($information->id)->update([
-            'title' => request('title'),
-            'description' => request('description'),
-            'image' => request('image'),
-            'interesting' => request('interesting'),
-            'user_id' => request('user_id'),
+        $information = Information::where('id',$information->id)->update([
+            'title' => $information->title,
+            'description' =>  $information->description,
+            'interesting' => $information->interesting,
         ]);
+        return $information;
     }
 
     public function getInformation($id)
     {
-        $information = Information::find($id);
+        $information = Information::where('user_id', $id)->first();
         return $information;
     }
 
@@ -112,9 +112,22 @@ class InformationController extends Controller
      * @param  \App\Models\Information  $information
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Information $information)
+    public function update(Request $information)
     {
-        //
+        $id = Information::where('user_id', $information->user_id)->first();
+        if(!$id) return response()->json(['error' => 'No existe la información'], 400);
+        try{
+            $informations = Information::where('user_id', $information->user_id)->update([
+                'title' => $information->title,
+                'description' => $information->description,
+                'interesting' => $information->interesting,
+            ]);
+            return $information;
+        }
+        catch(\Exception $e)
+        {
+            return response()->json(['error' => $e->getMessage()], 500);
+        }
     }
 
     /**

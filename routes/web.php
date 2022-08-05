@@ -19,3 +19,6 @@ use Illuminate\Http\Request;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/edit', function () {
+    return view('edit');
+});

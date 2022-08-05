@@ -52,3 +52,21 @@ Route::post('/saveInformacion', function (Request $request){
     return $user->store($request);
 });
 
+Route::get('/getInformacion/{id}', function ($id){
+    $user = new InformationController();
+    return $user->getInformation($id);
+}
+);
+
+Route::get('/getInformacion', function (){
+    $user = new InformationController();
+    return $user->show();
+}
+);
+
+Route::post('/updateInformacion', function (Request $id){
+    $user = new InformationController();
+    return $user->update($id);
+}
+);
+

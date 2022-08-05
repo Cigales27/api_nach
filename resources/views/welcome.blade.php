@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Grupo Nach</title>
-        <link rel="stylesheet" href="/resources/css/app.css">
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
         <style>
@@ -48,43 +48,18 @@
         <section>
 
             <div class="container">
-                <div class="row">
-                    <div class="col-md-4 card-user">
-                        <div class="card">
-                            <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>                                
-                            </div>
-                            <div class="card-footer">
-                                <div class="row">
-                                    <div class="col-4">
-                                        <small class="text-muted"><i class="fa-solid fa-heart"></i></small>
-                                        <small class="text-muted">57</small>
-                                    </div>
-                                    <div class="col-4">
-                                        <small class="text-muted"><i class="fa-solid fa-comment"></i></i></small>
-                                        <small class="text-muted">57</small>
-                                    </div>
-                                    <div class="col-4">
-                                        <small class="text-muted"><i class="fa-solid fa-eye"></i></i></small>
-                                        <small class="text-muted">57</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>                     
+                <div class="row" id="usuarios">         
                 </div>
             </div>
         </section>
         <div class="container">
             <header class="center">
-                <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h2>
+                <h2 id="Title-information">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h2>
             </header>
             <div class="row">
                 <div class="col-8">
-                    <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" class="w-100 h-100" alt="...">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae architecto, a aliquam itaque vitae, ab minima excepturi labore beatae veniam ipsa temporibus commodi cum consectetur. Ab quas distinctio est nesciunt.</p>
+                    <img  src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" class="w-100 h-100" alt="...">
+                    <p id="text-information">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae architecto, a aliquam itaque vitae, ab minima excepturi labore beatae veniam ipsa temporibus commodi cum consectetur. Ab quas distinctio est nesciunt.</p>
                 </div>
                 <div class="col-4">
                     <aside>
@@ -95,20 +70,15 @@
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">
-                                        <h3 class="card-title center">Lorena</h5>
-                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</p>
+                                        <h3 class="card-title center" id="nombre">Lorena</h5>
+                                        <p class="card-text" id="area">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <h3>Tambien te puede interesar:</h3>
-                        <div class="d-grid gap-2">
-                            <a href="#" class="btn btn-outline-secondary btn-block">Lorem ipsum dolor sit amet</a>
-                            <a href="#" class="btn btn-outline-secondary btn-block">Lorem ipsum dolor sit amet</a>
-                            <a href="#" class="btn btn-outline-secondary btn-block">Lorem ipsum dolor sit amet</a>
-                            <a href="#" class="btn btn-outline-secondary btn-block">Lorem ipsum dolor sit amet</a>
-                            <a href="#" class="btn btn-outline-secondary btn-block">Lorem ipsum dolor sit amet</a>
-                            <a href="#" class="btn btn-outline-secondary btn-block">Lorem ipsum dolor sit amet</a>
+                        <div class="d-grid gap-2" id="interes">
+                            
                         </div>
                     </aside>
                 </div>
@@ -116,6 +86,6 @@
         </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script src="/resources/js/functions.js"></script>
+    <script src="{{ asset('/js/functions.js') }}"></script>
     </body>
 </html>
