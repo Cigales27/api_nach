@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Information extends Model
 {
     use HasFactory;
-    protected $fillable = ['title', 'description', 'image', 'interesting', 'user_id'];
+    protected $fillable = ['title', 'description', 'interesting', 'user_id'];
     public $title;
     public $description;
     public $image;

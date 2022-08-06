@@ -17,16 +17,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Crear usuario</a>
+                    <a class="nav-link showcrateuser" href="#">Crear usuario</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Ediatr Usuario</a>
+                    <a class="nav-link showcreateinformation" href="#">Crear informacion</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Crear informacion</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Editar informacion</a>
+                    <a class="nav-link showeditinformation" href="#">Editar informacion</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
@@ -37,7 +34,12 @@
             </ul>
         </div>
     </nav>
-    <h1>Crear usuario</h1>
+
+    <!--Mensaje de error-->
+    <div class="text" id="message">
+        <h1 class="error"></h1>
+    </div>
+    <h1>Panel</h1>
     <!--Crea un formulario para editar un usuario-->
     <div class="container">
         <form id="createUser" method="POST">
@@ -59,19 +61,19 @@
 
     <!-- Informacion de usuario -->
     <div class="container">
-        <form action="" type="POST">
+        <form type="POST" id="createInformacion">
             <div class="form-group">
                 <label for="name">Titulo</label>
                 <input type="text" class="form-control" name="title" id="title">
             </div>
             <div class="form-group">
                 <label for="email">Description</label>
-                <input type="email" class="form-control" name="description" id="interesting">
+                <input type="text" class="form-control" name="description" id="interesting">
             </div>
             <div class="form-group">
                 <!--imagen-->
                 <label for="image">Imagen</label>
-                <input type="password" class="form-control" name="image" id="image">
+                <input type="text" class="form-control" name="image" id="image">
             </div>
             <div class="form-group">
                 <label for="user_id">usuario</label>
@@ -80,34 +82,34 @@
                     
                 </select>
             </div>
-            <button type="submit" class="btn btn-primary">Crear Informacion</button>
+            <a id="createInformation" class="btn btn-primary">Crear Informacion</a>
         </form>
     </div>
 
     <!--Editar informacion de usuario-->
     <div class="container">
-        <form action="" type="POST">
+        <form id="updateInformation" type="POST">
             <div class="form-group">
                 <label for="name">Titulo</label>
-                <input type="text" class="form-control" name="title" id="title">
+                <input type="text" class="form-control" name="title" >
             </div>
             <div class="form-group">
                 <label for="email">Description</label>
-                <input type="email" class="form-control" name="description" id="interesting">
+                <input type="email" class="form-control" name="description">
             </div>
             <div class="form-group">
                 <!--imagen-->
                 <label for="image">Imagen</label>
-                <input type="password" class="form-control" name="image" id="image">
+                <input type="password" class="form-control" name="image" >
             </div>
             <div class="form-group">
                 <label for="user_id">usuario</label>
                 <!--Select de usuarios-->
-                <select name="user_id" id="user_id" class="form-control">
+                <select name="user_id" id="selectionUser"  class="form-control">
                     
                 </select>
             </div>
-            <button type="submit" class="btn btn-primary">Editar Informacion</button>
+            <a id="updateInformacion" type="submit" class="btn btn-primary">Editar Informacion</a>
         </form>
     </div>
     

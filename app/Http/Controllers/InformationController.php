@@ -24,14 +24,19 @@ class InformationController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function     store(Request $request)
     {
         DB::beginTransaction();
         try
         {
             $information = Information::where('user_id', $request->user_id)->first();
             if($information){
-                return response()->json(['error' => 'Ya existe informcion del usuario'], 400);
+                return response()->json(['error' => 'Ya existe informcion del usuario']);
+            }
+
+            $user = UsersController::getUser($request->user_id);
+            if(!$user){
+                return response()->json(['error' => 'Usuario no existe'], 400);
             }
 
             $information= Information::create([
@@ -41,7 +46,9 @@ class InformationController extends Controller
                 'user_id' => $request->user_id,
             ]);
             if(!$information) throw new \Exception('Error al crear la información');   
-            $archivo=$request->file('image');
+            $existimage = $request->image != null;
+            if($existimage){
+                $archivo=$request->file('image');
             //crearemos la ruta donde se guardara el archivo
 
             $ruta=storage_path(`/images/`.$request->user_id);
@@ -55,6 +62,8 @@ class InformationController extends Controller
             $rutaCompleta=$ruta.'/'.$archivo->getClientOriginalName();
           
             $information::where('id',$information->id)->update(['image'=>$rutaCompleta]);
+            }
+            
             DB::commit();
 
             return $information;  
@@ -115,7 +124,7 @@ class InformationController extends Controller
     public function update(Request $information)
     {
         $id = Information::where('user_id', $information->user_id)->first();
-        if(!$id) return response()->json(['error' => 'No existe la información'], 400);
+        if(!$id) return response()->json(['error' => 'No existe la información']);
         try{
             $informations = Information::where('user_id', $information->user_id)->update([
                 'title' => $information->title,

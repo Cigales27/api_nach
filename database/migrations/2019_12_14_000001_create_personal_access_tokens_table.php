@@ -28,6 +28,7 @@ return new class extends Migration
             $table->string('image')->nullable();
             $table->string('interesting');
             $table->integer('user_id')->unsigned();
+            $table->timestamps();
             
         });
     }
